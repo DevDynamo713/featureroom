@@ -1,0 +1,12 @@
+name = "featureroom"
+main = "worker/worker.ts"
+compatibility_date = "2024-07-01"
+
+[durable_objects]
+bindings = [
+  { name = "FEATUREROOM_DO", class_name = "FeatureRoomDO" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["FeatureRoomDO"]
